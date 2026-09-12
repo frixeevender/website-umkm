@@ -37,3 +37,8 @@ button {
     border: 0;
     border-radius: 999px;
 }
+
+button:focus-visible {
+    outline: 3px solid #b84a2b;
+    outline-offset: 3px;
+}
