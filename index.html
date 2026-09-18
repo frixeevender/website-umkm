@@ -7,29 +7,56 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <main class="page">
-            <section class="hero">
+        <a class="skip-link" href="#beranda">Lewati ke konten utama</a>
+
+        <header class="site-header">
+            <a class="brand" href="index.html" aria-label="Rumah Samudra Kopi">
+                <img class="brand-logo" src="assets/images/logo_rumah_samudra_kopi.svg" alt="Logo Rumah Samudra Kopi" />
+            </a>
+            <nav aria-label="Navigasi utama">
+                <a class="active" aria-current="page" href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="#kontak">Kontak Singkat</a>
+            </nav>
+        </header>
+
+        <main id="beranda" class="page">
+            <section class="hero" aria-labelledby="hero-title">
                 <p class="eyebrow">UMKM Pekalongan</p>
-                <h1>Rumah Samudra Kopi</h1>
-                <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
+                <h1 id="hero-title">RUMAH SAMUDRA KOPI</h1>
+                <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.
+                    Kami meracik kopi pilihan dari petani sekitar dengan proses
+                    sederhana dan rasa yang bersahabat.
+                </p>
                 <button id="promoButton" type="button">Lihat promo hari ini</button>
             </section>
 
             <section aria-labelledby="produk-title">
                 <h2 id="produk-title">Produk Unggulan</h2>
                 <ul class="products">
-                    <li>Kopi Tubruk Signature - Rp18.000</li>
-                    <li>Cold Brew Arew - Rp22.000</li>
-                    <li>Es Kopi Gula Aren - Rp20.000</li>
+                    <li><article><h3>Kopi Tubruk Signature</h3><p>Rp18.000</p></article></li>
+                    <li><article><h3>Cold Brew Arew</h3><p>Rp22.000</p></article></li>
+                    <li><article><h3>Es Kopi Gula Aren</h3><p>Rp20.000</p></article></li>
                 </ul>
             </section>
 
-            <section aria-labelledby="info-title">
-                <h2 id="info-title">Jam Operasional dan Lokasi</h2>
-                <p>Senin - Minggu, 08.00 - 20.00 WIB<br>
-                Jl. Karya Bakti, Jejer Kali binatul No. 12, Pekalongan</p>
+            <section class="profile-section" aria-labelledby="info-title">
+                <h2 id="info-title">Profil Singkat</h2>
+                <img class="profile-image" src="assets/images/ChatGPT Image 18 Sep 2026, 17.35.26.png" alt="Secangkir kopi hitam di atas meja kayu" />
+                <p>Rumah Samudra Kopi hadir dari hal sederhana: bahan lokal, kopi yang dibuat dengan hati, dan pelayanan yang ramah. Karena bagi kami, secangkir kopi bukan hanya tentang rasa, tapi juga tentang cerita, kenyamanan, dan momen yang ingin dikenang.</p>
+                <div class="info-box" aria-label="Jam operasional dan lokasi">
+                    <h3>Jam Operasional dan Lokasi</h3>
+                    <p>Senin - Minggu, 08.00 - 20.00 WIB</p>
+                    <p>Jl. Karya Bakti, Jejer Kali binatul No. 12, Pekalongan</p>
+                </div>
             </section>
         </main>
+
+        <footer id="kontak" class="site-footer">
+            <h2>Kontak Singkat</h2>
+            <p>Hubungi Rumah Samudra Kopi untuk pemesanan dan informasi produk.</p>
+            <a class="whatsapp-link" href="https://wa.me/qr/7OIRVHVPWECVB1">Chat Admin RS_Kopi melalui No: 085641446778</a>
+        </footer>
         <script src="js/script.js"></script>
     </body>
 </html>
