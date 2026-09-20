@@ -32,6 +32,7 @@ select {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    min-width: 0;
     padding: 5px 20px;
     background: #ffffff;
     border-bottom: 1px solid #ead8c3;
@@ -45,11 +46,12 @@ select {
     text-decoration: none;
     white-space: nowrap;
     line-height: 1;
+    flex: 0 0 auto;
 }
 
 .brand-logo {
     display: block;
-    width: 85;
+    width: 85px;
     height: 70px;
     object-fit: contain;
     border-radius: 8px;
@@ -65,6 +67,9 @@ nav {
     gap: 16px;
     flex-wrap: nowrap;
     white-space: nowrap;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
 }
 
 nav a,
@@ -127,7 +132,20 @@ button:focus-visible {
 }
 
 section {
-    margin-block: 32px;
+    margin-block: 18px;
+}
+
+.page > section > h1,
+.page > section > h2,
+.page > section > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.media-title {
+    margin: 4px 0 4px;
+    font-size: 1.25rem;
+    line-height: 1.3;
 }
 
 .eyebrow {
@@ -157,7 +175,7 @@ section {
 }
 
 .profile-section {
-    margin-top: 40px;
+    margin-top: 28px;
 }
 
 .profile-image {
@@ -228,6 +246,86 @@ button:focus-visible {
 
 .site-footer .whatsapp-link {
     color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0 0 16px;
+}
+
+figcaption {
+    margin-top: 8px;
+    color: #6b5b51;
+}
+
+.gallery-list {
+    display: grid;
+    gap: 8px;
+}
+
+.media-card-second {
+    margin-top: 0;
+}
+
+.gallery-list .media-card {
+    margin-bottom: 4px;
+}
+
+.media-card img {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.media-card figcaption {
+    margin-top: 6px;
+    padding: 0 4px;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+caption {
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ead8c3;
+}
+
+thead {
+    color: #ffffff;
+    background: #4b2e21;
+}
+
+tbody th {
+    font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+    background: #fbf7f0;
 }
 
 @media (max-width: 640px) {
