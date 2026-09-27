@@ -18,7 +18,7 @@
                 <a href="tentang.html">Tentang Kami</a>
                 <a href="produk.html">Produk</a>
                 <a class="active" aria-current="page" href="galeri.html">Galeri</a>
-                <a href="index.html#kontak">Kontak Singkat</a>
+                <a href="kontak.html">Kontak</a>
             </nav>
         </header>
 
@@ -40,6 +40,17 @@
                         <img src="assets/images/rumah_samudra_kopi2.avif" alt="gambar orang menuang air ke dripper kopi" />
                         <figcaption>Proses seduh manual dilakukan perlahan agar rasa kopi tetap seimbang dan nikmat. Setiap langkah diperhatikan dengan baik, mulai dari takaran kopi hingga proses penyeduhan, untuk menjaga cita rasa dan aroma yang dihasilkan. Sederhana dalam prosesnya, tetapi tetap dibuat dengan penuh perhatian untuk memberikan pengalaman kopi yang lebih berkesan.</figcaption>
                     </figure>
+                    <h3 class="audio-title">Musik Rumah Samudra KopI</h3>
+                    <div class="audio-player" aria-label="Audio Secangkir Cerita">
+                        <audio preload="metadata" src="assets/audio/Secangkir_Cerita.mp3"></audio>
+                        <button class="audio-toggle" type="button" aria-label="Putar Secangkir Cerita">
+                            <svg class="audio-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+                            <svg class="audio-pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM15 5h4v14h-4z" /></svg>
+                        </button>
+                        <input class="audio-progress" type="range" min="0" max="100" value="0" aria-label="Posisi audio Secangkir Cerita" />
+                        <span class="audio-waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                        <span class="visually-hidden audio-status" aria-live="polite">Audio siap diputar.</span>
+                    </div>
                 </div>
             </section>
 
@@ -47,7 +58,7 @@
 
         <footer class="site-footer">
             <p>Rumah Samudra Kopi, Pekalongan</p>
-            <a class="whatsapp-link" href="index.html#kontak">Lihat kontak kami</a>
+            <a class="whatsapp-link" href="index.html#kontak">Hubungi Kami</a>
         </footer>
         <script src="js/script.js"></script>
     </body>
