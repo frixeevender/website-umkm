@@ -63,14 +63,13 @@ select {
 
 .site-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     gap: var(--space-3);
     min-width: 0;
     padding: var(--space-1) var(--space-4);
     background: var(--color-surface);
     border-bottom: 1px solid var(--color-border-soft);
-    flex-wrap: nowrap;
 }
 
 .brand {
@@ -94,12 +93,9 @@ select {
 nav {
     display: flex;
     align-items: center;
-    gap: var(--space-3);
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    gap: var(--space-2) var(--space-3);
+    flex-wrap: wrap;
     min-width: 0;
-    overflow-x: auto;
-    scrollbar-width: thin;
 }
 
 nav a,
@@ -122,17 +118,17 @@ nav a.active {
 }
 
 .page {
-    max-width: 920px;
+    width: min(100% - 2rem, 72rem);
     margin: 0 auto;
-    padding: var(--space-5) var(--space-4);
+    padding-block: clamp(1.5rem, 4vw, 2rem);
 }
 
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    grid-template-columns: 1fr;
     align-items: center;
     gap: var(--space-4);
-    padding: var(--space-5);
+    padding: clamp(1rem, 3vw, 2rem);
     color: var(--color-on-primary);
     background: var(--color-primary-strong);
     border-radius: var(--radius-lg);
@@ -174,7 +170,7 @@ nav a.active {
 
 .hero h1 {
     margin: var(--space-2) 0;
-    font-size: 2.375rem;
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.375rem);
     line-height: 1.1;
     font-weight: 700;
 }
@@ -237,7 +233,7 @@ section {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-3);
 }
 
@@ -313,7 +309,8 @@ section {
     display: block;
     width: 100%;
     max-width: 560px;
-    height: 340px;
+    height: auto;
+    aspect-ratio: 4 / 3;
     margin: var(--space-4) 0 var(--space-3);
     object-fit: cover;
     object-position: center;
@@ -397,7 +394,7 @@ figcaption {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-3);
 }
 
@@ -555,9 +552,15 @@ figcaption {
     line-height: 1.45;
 }
 
-.table-wrapper {
+.table-scroll {
+    max-width: 100%;
     overflow-x: auto;
     border-radius: var(--radius-md);
+}
+
+.table-scroll:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
 }
 
 .field {
@@ -614,9 +617,37 @@ fieldset label {
 
 table {
     width: 100%;
-    min-width: 560px;
+    min-width: 40rem;
     border-collapse: collapse;
     background: var(--color-surface);
+}
+
+@media (min-width: 42rem) {
+    .site-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 48rem) {
+    .hero:not(.hero-about) {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 60rem) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 caption {
@@ -646,12 +677,6 @@ tbody tr:nth-child(even) {
 }
 
 @media (max-width: 640px) {
-    .site-header {
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
     nav {
         gap: 10px;
         font-size: 0.9rem;
@@ -679,7 +704,4 @@ tbody tr:nth-child(even) {
         width: 3px;
     }
 
-    .hero {
-        padding: 28px 24px;
-    }
 }
