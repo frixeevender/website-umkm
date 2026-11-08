@@ -243,7 +243,13 @@ section {
     gap: var(--space-3);
 }
 
+#produk-unggulan {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
 .js-product-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -257,6 +263,10 @@ section {
 .js-product-card h3,
 .js-product-card p {
     margin: 0 0 var(--space-2);
+}
+
+.js-product-card h3 {
+    padding-block-start: var(--space-4);
 }
 
 .js-product-card .price {
