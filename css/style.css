@@ -243,6 +243,36 @@ section {
     gap: var(--space-3);
 }
 
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-block: var(--space-3);
+}
+
+.filter-button {
+    padding: var(--space-1) var(--space-3);
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+}
+
+.filter-button:hover,
+.filter-button:focus-visible {
+    color: var(--color-text);
+    background: var(--color-surface);
+    border-color: var(--color-primary);
+    outline: 3px solid rgb(37 99 235 / 20%);
+    outline-offset: 2px;
+}
+
+.filter-button.is-active {
+    color: var(--color-on-primary);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
 #produk-unggulan {
     color: var(--color-primary);
     font-weight: 700;
@@ -272,6 +302,32 @@ section {
 .js-product-card .price {
     color: var(--color-primary-strong);
     font-weight: 700;
+}
+
+.js-product-card .category-note {
+    color: var(--color-muted);
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: var(--space-3);
+    color: var(--color-muted);
+    background: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.hide-product-button {
+    padding: 0;
+    color: var(--color-primary);
+    background: transparent;
+    text-decoration: underline;
+}
+
+.hide-product-button:hover,
+.hide-product-button:focus-visible {
+    color: var(--color-primary-strong);
+    background: transparent;
 }
 
 .stock-badge {

@@ -37,44 +37,19 @@
                 </ul>
             </section>
 
-            <section aria-labelledby="produk-baru-title">
-                <h2 id="produk-baru-title">Produk Pilihan</h2>
-                <div class="product-grid">
-                    <article class="product-card">
-                        <span class="product-badge">Favorit</span>
-                        <h3>Kopi Tubruk Signature</h3>
-                        <p>Kopi tubruk pilihan untuk menemani waktu istirahat.</p>
-                        <p class="price">Rp45.000</p>
-                        <div class="card-actions">
-                            <a class="button" href="kontak.html">Tanya produk</a>
-                            <a href="#harga-title">Lihat harga</a>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <h3>Cold Brew Aren</h3>
-                        <p>Kopi dingin dengan perpaduan rasa kopi dan gula aren.</p>
-                        <p class="price">Rp22.000</p>
-                        <div class="card-actions">
-                            <a class="button" href="kontak.html">Tanya produk</a>
-                            <a href="#harga-title">Lihat harga</a>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <h3>Paket Tester Lokal</h3>
-                        <p>Paket tiga sachet untuk mencoba pilihan kopi lokal.</p>
-                        <p class="price">Rp25.000</p>
-                        <div class="card-actions">
-                            <a class="button" href="kontak.html">Tanya produk</a>
-                            <a href="#harga-title">Lihat harga</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
             <section aria-labelledby="produk-dinamis-title">
-                <h2 id="produk-dinamis-title">Produk dari Data Lokal</h2>
-                <p id="produk-ringkasan">Data produk akan dimuat melalui JavaScript.</p>
+                <h2 id="produk-dinamis-title">Produk Pilihan</h2>
+                <p id="produk-ringkasan" class="produk-status" aria-live="polite">Produk belum dimuat.</p>
                 <p id="produk-unggulan">Produk unggulan akan ditentukan melalui JavaScript.</p>
+
+                <div class="filter-bar" role="group" aria-label="Filter kategori produk">
+                    <button class="filter-button is-active" type="button" data-filter="Semua" aria-pressed="true">Semua</button>
+                    <button class="filter-button" type="button" data-filter="Kopi" aria-pressed="false">Kopi</button>
+                    <button class="filter-button" type="button" data-filter="Minuman" aria-pressed="false">Minuman</button>
+                    <button class="filter-button" type="button" data-filter="Bundling" aria-pressed="false">Bundling</button>
+                    <button class="filter-button" type="button" data-filter="Makanan" aria-pressed="false">Makanan</button>
+                </div>
+
                 <div id="produk-dinamis" class="js-product-grid" aria-live="polite"></div>
             </section>
 
