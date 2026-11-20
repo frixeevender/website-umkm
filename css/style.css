@@ -721,6 +721,72 @@ fieldset label {
     max-width: 680px;
 }
 
+.field-error,
+.form-feedback {
+    margin: 0;
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+.field-error {
+    min-height: 1.4rem;
+}
+
+.form-feedback {
+    max-width: 680px;
+    margin-block: var(--space-2);
+}
+
+.form-feedback.success {
+    color: #166534;
+}
+
+[aria-invalid="true"] {
+    border-color: #b91c1c;
+    box-shadow: 0 0 0 3px rgb(185 28 28 / 15%);
+}
+
+.consent-field label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-1);
+}
+
+.consent-field input {
+    flex: 0 0 auto;
+    margin-top: 0.35em;
+}
+
+.preference-panel {
+    max-width: 680px;
+    margin-block: var(--space-4);
+    padding: var(--space-3);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.preference-panel h2 {
+    margin-top: 0;
+}
+
+.preference-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.secondary-button {
+    color: var(--color-primary);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.secondary-button:hover {
+    color: var(--color-on-primary);
+    background: var(--color-primary-strong);
+}
+
 #preview-form {
     max-width: 680px;
     padding: var(--space-3);
